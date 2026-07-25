@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPC - Minecraft Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos extra de decoración específicos para esta página */
+        .highlight-card {
+            background: linear-gradient(145deg, #1e1b4b, #131b2e);
+            border-left: 5px solid #a855f7 !important;
+            padding: 30px;
+        }
+
+        .server-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #1a2234 0%, #131b2e 100%);
+        }
+
+        .server-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, #a855f7, #38bdf8);
+            opacity: 0.6;
+        }
+
+        .badge-pro {
+            background: #a855f7;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .resena-card {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #283548;
+            background-color: #0f172a;
+        }
+
+        .resena-quote {
+            font-style: italic;
+            color: #cbd5e1;
+            position: relative;
+        }
+
+        .resena-quote::before {
+            content: '"';
+            font-size: 40px;
+            color: #a855f7;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-brand">
+            <span>EPC</span>
+        </div>
+        <nav>
+            <a href="index.html#inicio">Inicio</a>
+            <a href="index.html#videos">Vídeos</a>
+            <a href="index.html#comunidades">Comunidades</a>
+            <a href="recursos.html" class="dev-link">Recursos</a>
+            <a href="minecraft.html" class="dev-link">Minecraft</a>
+            <a href="contacto.html" class="dev-link">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero recursos-hero">
+        <div class="hero-content">
+            <h1>⛏️ Portafolio Minecraft</h1>
+            <p>Especialista en configuración técnica y gestión operativa de grandes redes.</p>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <h2>👨‍💻 Acerca de Mí</h2>
+        <div class="tarjeta highlight-card" style="width: 100%; box-sizing: border-box;">
+            <p style="color: #94a3b8; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Developer & Staff Manager</p>
+            <p style="color: #e2e8f0; font-size: 17px; line-height: 1.8; margin: 0;">
+                Soy Eduardo (EPC). Mi trayectoria se define por el <strong>orden y la eficiencia técnica</strong>. Con <strong>4 años liderando staffs</strong> y <strong>2 años en desarrollo técnico</strong>, me especializo en crear ecosistemas estables para comunidades masivas. Desde la resolución de bugs críticos hasta el diseño de modalidades Survival personalizadas, mi objetivo es la excelencia operativa.
+            </p>
+        </div>
+    </section>
+
+    <section id="servidores">
+        <h2>🌐 Trayectoria en Servidores</h2>
+        <p class="section-desc">Listado de proyectos propios y colaboraciones ordenados por relevancia.</p>
+        
+        <div class="tarjetas-container">
+            
+            <div class="tarjeta server-card" style="border-color: #a855f7;">
+                <div class="badge-pro">PROYECTO PROPIO</div>
+                <div class="comunidad-header">
+                    <img src="sotano.jpg" alt="Sótano" class="comunidad-logo">
+                    <div>
+                        <h3>El Sótano de EPC</h3>
+                        <span class="miembros-badge">+700 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Fundador</p>
+            </div>
+
+            <div class="tarjeta server-card" style="border-color: #a855f7;">
+                <div class="badge-pro">PROYECTO PROPIO</div>
+                <div class="comunidad-header">
+                    <img src="seyran.png" alt="Seyran" class="comunidad-logo">
+                    <div>
+                        <h3>SeyranMC</h3>
+                        <span class="miembros-badge minecraft-badge">+400 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Fundador & Developer</p>
+            </div>
+
+            <div class="tarjeta server-card" style="border-color: #a855f7;">
+                <div class="badge-pro">PROYECTO PROPIO</div>
+                <div class="comunidad-header">
+                    <img src="logo_epcraft.png" alt="EPCraft" class="comunidad-logo">
+                    <div>
+                        <h3>EPCraft</h3>
+                        <span class="miembros-badge">+250 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Fundador & Developer</p>
+            </div>
+
+            <div class="tarjeta server-card">
+                <div class="comunidad-header">
+                    <img src="logo_lleli.jpg" alt="Llelitow" class="comunidad-logo">
+                    <div>
+                        <h3>Comunidad Llelitow</h3>
+                        <span class="miembros-badge">+1700 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Moderador</p>
+            </div>
+
+            <div class="tarjeta server-card">
+                <div class="comunidad-header">
+                    <img src="logo_jerarquia.png" alt="Jerarquía" class="comunidad-logo">
+                    <div>
+                        <h3>La Jerarquía</h3>
+                        <span class="miembros-badge">+300 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Head Developer</p>
+            </div>
+
+            <div class="tarjeta server-card">
+                <div class="comunidad-header">
+                    <img src="logo_furiamc.png" alt="Furia" class="comunidad-logo">
+                    <div>
+                        <h3>FuriaMC</h3>
+                        <span class="miembros-badge">+6000 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Developer & Admin</p>
+            </div>
+
+            <div class="tarjeta server-card">
+                <div class="comunidad-header">
+                    <img src="logo_golemmc.png" alt="Golem" class="comunidad-logo">
+                    <div>
+                        <h3>GolemMC</h3>
+                        <span class="miembros-badge">+1500 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Admin & Developer</p>
+            </div>
+
+            <div class="tarjeta server-card">
+                <div class="comunidad-header">
+                    <img src="logo_awitacraft.png" alt="Awita" class="comunidad-logo">
+                    <div>
+                        <h3>Awitacraft</h3>
+                        <span class="miembros-badge">+1500 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Developer</p>
+            </div>
+
+            <div class="tarjeta server-card">
+                <div class="comunidad-header">
+                    <img src="logo_minefity.png" alt="Minefity" class="comunidad-logo">
+                    <div>
+                        <h3>Minefity</h3>
+                        <span class="miembros-badge">+200 Miembros</span>
+                    </div>
+                </div>
+                <p style="margin-top: 12px;"><strong>Cargos:</strong> Developer</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="resenas">
+        <h2>⭐ Valoraciones</h2>
+        <p class="section-desc">Lo que opinan otros creadores y administradores sobre mi trabajo.</p>
+        
+        <div class="tarjetas-container">
+            
+            <div class="tarjeta resena-card">
+                <h3 style="color: #a855f7;">NIXHUGO</h3>
+                <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de La Jerarquía</p>
+                <p class="resena-quote">"EPC es un desarrollador altamente comprometido. Destaca por realizar sus tareas con responsabilidad, calidad y sin excusas. Sin duda, un miembro valioso para cualquier proyecto."</p>
+                <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
+            </div>
+
+            <div class="tarjeta resena-card">
+                <h3 style="color: #a855f7;">Camurilo</h3>
+                <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de GolemMC</p>
+                <p class="resena-quote">"EPC en Golemmc fue muy buen staff, nos ayudó con la moderación y nos dejó el servidor bien estable, tomó buenas sanciones y atendió muchos tickets dando un soporte excelente."</p>
+                <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
+            </div>
+
+            <div class="tarjeta resena-card">
+                <h3 style="color: #a855f7;">Camurilo</h3>
+                <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de Awitacraft</p>
+                <p class="resena-quote">"EPC en AwitaCraft hizo un trabajo increíble en administración y desarrollo del servidor junto a nosotros, ayudándonos en la configuración de plugins, resolución de bugs y desarrollo de setup."</p>
+                <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 EPC - Minecraft Portafolio. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

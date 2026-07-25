@@ -1,0 +1,369 @@
+/* Efecto de desplazamiento suave al hacer clic en el menú */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo general oscuro y moderno estilo Dev */
+body {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabecera / Menú de Navegación */
+header {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131b2e;
+    padding: 15px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    border: 1px solid #1f293d;
+}
+
+.nav-brand span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #a855f7;
+}
+
+.active-nav {
+    color: #a855f7 !important;
+    border-bottom: 2px solid #a855f7;
+    padding-bottom: 2px;
+}
+
+.dev-link {
+    background-color: #1f293d;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+
+/* Secciones generales */
+section {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #131b2e;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    border: 1px solid #1f293d;
+}
+
+.hero {
+    background: linear-gradient(135deg, #131b2e 0%, #1e1b4b 100%);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.recursos-hero {
+    background: linear-gradient(135deg, #131b2e 0%, #3b0764 100%) !important;
+    padding: 30px 20px !important;
+    margin-bottom: 30px;
+}
+
+/* Logo principal grande en Hero */
+.logo-grande-container {
+    margin-bottom: 20px;
+}
+
+.logo-grande-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #a855f7;
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+}
+
+.hero h1 {
+    font-size: 34px;
+    color: #fff;
+    margin-top: 0;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+    line-height: 1.5;
+}
+
+.hero p strong {
+    color: #fff;
+}
+
+/* Insignia de Ranking y Stats */
+.ranking-badge {
+    display: inline-block;
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #d8b4fe;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Títulos */
+h2 {
+    color: #fff;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.section-desc {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* Botones genéricos */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn.primary {
+    background-color: #a855f7;
+    color: white;
+}
+
+.btn.secondary {
+    background-color: #1f293d;
+    color: #e2e8f0;
+    border: 1px solid #374151;
+}
+
+.btn.discord-btn {
+    background-color: #5865F2;
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Contenedor de Tarjetas */
+.tarjetas-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: #1a2234;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 260px;
+    border: 1px solid #283548;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: #a855f7;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.tarjeta p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Galería Grid para la sección de Recursos */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.galeria-item {
+    background: linear-gradient(145deg, #161f33, #111827);
+    border: 1px solid #283548;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.galeria-item:hover {
+    transform: translateY(-6px);
+    border-color: #a855f7;
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.25);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.galeria-item h4 {
+    color: #f1f5f9;
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Estilos específicos para la sección de Comunidades con logo e info */
+.comunidad-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.comunidad-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #5865F2;
+}
+
+.miembros-badge {
+    display: inline-block;
+    background-color: rgba(88, 101, 242, 0.2);
+    color: #8ea1ff;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.minecraft-badge {
+    background-color: rgba(56, 189, 248, 0.2);
+    color: #7dd3fc;
+}
+
+/* Etiquetas dentro de tarjetas de vídeo */
+.video-tag {
+    background-color: #374151;
+    color: #cbd5e1;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.video-tag.viral {
+    background-color: #7c2d12;
+    color: #fdba74;
+}
+
+.video-tag.edicion {
+    background-color: #1e3a8a;
+    color: #93c5fd;
+}
+
+.video-tag.tier {
+    background-color: #3b0764;
+    color: #d8b4fe;
+}
+
+.link-btn {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+/* Zona Dev (Apartado secundario diferenciado) */
+.dev-section {
+    border: 1px dashed #4b5563;
+    background-color: #0f172a;
+}
+
+.dev-badge {
+    background-color: #1e293b;
+    color: #38bdf8;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: 1px solid #0284c7;
+}
+
+.dev-card {
+    background-color: #131b2e;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+

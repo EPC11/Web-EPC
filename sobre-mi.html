@@ -5,6 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPC - Sobre mí</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .historia-intro {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.2), transparent 32%),
+                linear-gradient(135deg, #131b2e 0%, #1e1b4b 100%);
+        }
+
+        .historia-intro h1 {
+            max-width: 780px;
+            margin: 0 auto 18px;
+            line-height: 1.2;
+        }
+
+        .historia-intro p {
+            max-width: 680px;
+        }
+
+        .historia-intro .eyebrow {
+            color: #c4b5fd;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .historia-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
+            margin: 22px 0 30px;
+        }
+
+        .historia-stat {
+            padding: 18px;
+            text-align: center;
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.94), rgba(17, 24, 39, 0.94));
+            border: 1px solid #374151;
+            border-radius: 12px;
+        }
+
+        .historia-stat strong {
+            display: block;
+            color: #e9d5ff;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .historia-stat span {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .historia-timeline {
+            display: grid;
+            gap: 18px;
+            counter-reset: historia;
+        }
+
+        .historia-etapa {
+            position: relative;
+            padding: 25px 28px 25px 68px;
+            background: linear-gradient(145deg, #161f33, #111827);
+            border: 1px solid #283548;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24);
+            counter-increment: historia;
+        }
+
+        .historia-etapa::before {
+            content: counter(historia, decimal-leading-zero);
+            position: absolute;
+            left: 22px;
+            top: 24px;
+            color: #c4b5fd;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .historia-etapa h2 {
+            margin-bottom: 12px;
+            color: #f8fafc;
+            font-size: 21px;
+        }
+
+        .historia-etapa p {
+            margin: 0 0 12px;
+            color: #b6c2d2;
+            line-height: 1.8;
+        }
+
+        .historia-etapa p:last-child {
+            margin-bottom: 0;
+        }
+
+        .historia-etapa strong {
+            color: #e9d5ff;
+        }
+
+        .historia-cierre {
+            margin-top: 22px;
+            padding: 30px;
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 14px;
+            background: linear-gradient(120deg, rgba(88, 28, 135, 0.32), rgba(17, 24, 39, 0.96));
+            text-align: center;
+        }
+
+        .historia-cierre p {
+            margin: 0;
+            color: #f8fafc;
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .historia-cierre span {
+            display: block;
+            margin-top: 12px;
+            color: #c4b5fd;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .historia-etapa {
+                padding: 56px 20px 22px;
+            }
+
+            .historia-etapa::before {
+                top: 20px;
+                left: 20px;
+            }
+
+            .historia-cierre {
+                padding: 24px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -18,15 +161,64 @@
             <a href="index.html#comunidades">Comunidades</a>
             <a href="recursos.html" class="dev-link">Recursos</a>
             <a href="staff.html" class="dev-link">Staff</a>
-            <a href="sobre-mi.html" class="dev-link">Sobre mí</a>
+            <a href="sobre-mi.html" class="dev-link active-nav">Sobre mí</a>
             <a href="contacto.html" class="dev-link">Contacto</a>
         </nav>
     </header>
 
-    <section class="hero recursos-hero">
+    <section class="hero historia-intro">
         <div class="hero-content">
-            <h1>👋 Sobre mí</h1>
-            <p>Esta sección está preparada. Pronto compartiré aquí más sobre mí.</p>
+            <p class="eyebrow">Mi historia · Mi camino como creador</p>
+            <h1>EPC: una historia sobre mí y sobre una decadencia que no era mía</h1>
+            <p>Una historia de cambios, momentos difíciles y la decisión de seguir creando sin dejar de ser yo.</p>
+        </div>
+    </section>
+
+    <section aria-label="Hitos de mi historia">
+        <div class="historia-stats">
+            <div class="historia-stat">
+                <strong>Junio de 2026</strong>
+                <span>Casi 3 millones de visitas</span>
+            </div>
+            <div class="historia-stat">
+                <strong>18 de julio</strong>
+                <span>Comienza Tipos de Jugadores</span>
+            </div>
+            <div class="historia-stat">
+                <strong>800.000+</strong>
+                <span>Visitas a un semimeme de 14 segundos</span>
+            </div>
+        </div>
+
+        <div class="historia-timeline">
+            <article class="historia-etapa">
+                <h2>El comienzo y el primer gran alcance</h2>
+                <p>Me llaman EPC. Soy un <em>Amongtuber</em> español y <em>developer</em> de Minecraft con mi propio servidor. Al principio subía vídeos por diversión y probé a hacer memes. Se hicieron muy virales y alcancé mi techo en junio de 2026, rozando los <strong>3 millones de visitas</strong>.</p>
+                <p>Pero no quería seguir por ahí. Para mí era contenido basura, casi sin edición, y no me representaba. El contenido basura te da estadísticas, pero no te da reputación ni honra.</p>
+            </article>
+
+            <article class="historia-etapa">
+                <h2>Elegir un camino propio</h2>
+                <p>Quería aportar valor real, así que estudié la edición de Llalo —mi gran inspiración— para darle un giro total a mi canal. Lancé la serie <em>Tipos de Jugadores</em> el 18 de julio y el cambio empezó funcionando muy bien.</p>
+                <p>Al dejar los memes, las visitas bajaron, pero lo asumí. El problema real llegó a partir de la parte 4 de mi serie, cuando todo empezó a decaer drásticamente. Cuanto más me esforzaba con guías y colaboraciones, menos gente llegaba.</p>
+            </article>
+
+            <article class="historia-etapa">
+                <h2>Cuando las cifras empezaron a pesar</h2>
+                <p>Pasé por momentos muy difíciles y lo pasé realmente mal, pensando que el problema era yo. Para colmo, a finales de septiembre subí un semimeme de 14 segundos, sin esfuerzo, y superó las <strong>800.000 visitas en días</strong>.</p>
+                <p>Eso me rompió por dentro, porque sentí que lo que menos trabajaba era lo único que el algoritmo premiaba.</p>
+            </article>
+
+            <article class="historia-etapa">
+                <h2>Seguir adelante sin rendirme</h2>
+                <p>Pero no me rendí. Con el tiempo entendí que el meme solo alquila ojos de paso, mientras que el contenido trabajado construye una comunidad de verdad. Estaba midiendo mi valor con la regla equivocada.</p>
+                <p>Por eso sigo editando. No pienso vender mi identidad por un contador de visitas. Usaré el meme solo como puerta de entrada ocasional y el esfuerzo como casa.</p>
+            </article>
+        </div>
+
+        <div class="historia-cierre">
+            <p>Sigo aquí, sigo editando y sigo siendo yo; esa es la parte que jamás entrará en decadencia.</p>
+            <span>— EPC</span>
         </div>
     </section>
 

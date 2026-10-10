@@ -39,6 +39,47 @@
             display: inline-block;
         }
 
+        .resenas-grupo + .resenas-grupo {
+            margin-top: 38px;
+            padding-top: 30px;
+            border-top: 1px solid #283548;
+        }
+
+        .resenas-subtitulo {
+            color: #e9d5ff;
+            margin: 0 0 8px;
+            font-size: 20px;
+        }
+
+        .resena-etiqueta {
+            display: inline-block;
+            width: fit-content;
+            margin-bottom: 16px;
+            padding: 5px 10px;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.12);
+            color: #7dd3fc;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .resena-bot-card {
+            max-width: 680px;
+            border-color: rgba(56, 189, 248, 0.32);
+        }
+
+        .resena-atribucion {
+            color: #7dd3fc !important;
+            font-size: 12px !important;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-top: 18px;
+            text-transform: uppercase;
+        }
+
         .resena-card {
             border-style: solid;
             border-width: 1px;
@@ -259,31 +300,48 @@
 
     <section id="resenas">
         <h2>⭐ Valoraciones</h2>
-        <p class="section-desc">Lo que opinan otros creadores y administradores sobre mi trabajo.</p>
-        
-        <div class="tarjetas-container">
-            
-            <div class="tarjeta resena-card">
-                <h3 style="color: #a855f7;">NIXHUGO</h3>
-                <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de La Jerarquía</p>
-                <p class="resena-quote">"EPC es un desarrollador altamente comprometido. Destaca por realizar sus tareas con responsabilidad, calidad y sin excusas. Sin duda, un miembro valioso para cualquier proyecto."</p>
-                <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
-            </div>
+        <p class="section-desc">Experiencias de quienes han trabajado conmigo y probado mis proyectos.</p>
 
-            <div class="tarjeta resena-card">
-                <h3 style="color: #a855f7;">Camurilo</h3>
-                <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de GolemMC</p>
-                <p class="resena-quote">"EPC en Golemmc fue muy buen staff, nos ayudó con la moderación y nos dejó el servidor bien estable, tomó buenas sanciones y atendió muchos tickets dando un soporte excelente."</p>
-                <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
-            </div>
+        <div class="resenas-grupo">
+            <h3 class="resenas-subtitulo">🛠️ Reseñas de mi trabajo como developer</h3>
+            <p class="section-desc">Opiniones sobre desarrollo, gestión y trabajo técnico en servidores.</p>
 
-            <div class="tarjeta resena-card">
-                <h3 style="color: #a855f7;">Camurilo</h3>
-                <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de Awitacraft</p>
-                <p class="resena-quote">"EPC en AwitaCraft hizo un trabajo increíble en administración y desarrollo del servidor junto a nosotros, ayudándonos en la configuración de plugins, resolución de bugs y desarrollo de setup."</p>
-                <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
-            </div>
+            <div class="tarjetas-container">
+                <div class="tarjeta resena-card">
+                    <h3 style="color: #a855f7;">NIXHUGO</h3>
+                    <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de La Jerarquía</p>
+                    <p class="resena-quote">"EPC es un desarrollador altamente comprometido. Destaca por realizar sus tareas con responsabilidad, calidad y sin excusas. Sin duda, un miembro valioso para cualquier proyecto."</p>
+                    <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
+                </div>
 
+                <div class="tarjeta resena-card">
+                    <h3 style="color: #a855f7;">Camurilo</h3>
+                    <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de GolemMC</p>
+                    <p class="resena-quote">"EPC en Golemmc fue muy buen staff, nos ayudó con la moderación y nos dejó el servidor bien estable, tomó buenas sanciones y atendió muchos tickets dando un soporte excelente."</p>
+                    <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
+                </div>
+
+                <div class="tarjeta resena-card">
+                    <h3 style="color: #a855f7;">Camurilo</h3>
+                    <p style="color: #38bdf8; font-size: 12px; font-weight: bold; margin-bottom: 15px;">Founder de Awitacraft</p>
+                    <p class="resena-quote">"EPC en AwitaCraft hizo un trabajo increíble en administración y desarrollo del servidor junto a nosotros, ayudándonos en la configuración de plugins, resolución de bugs y desarrollo de setup."</p>
+                    <p style="color: #fbbf24; margin-top: 15px;">★★★★★</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resenas-grupo">
+            <h3 class="resenas-subtitulo">🤖 Reseñas de mis bots</h3>
+            <p class="section-desc">Opiniones sobre los bots de Discord que he creado.</p>
+
+            <div class="tarjetas-container">
+                <div class="tarjeta resena-card resena-bot-card">
+                    <span class="resena-etiqueta">Bot de Discord</span>
+                    <h3 style="color: #38bdf8;">Experiencia de un cliente</h3>
+                    <p class="resena-quote">"Muy satisfecho con el trabajo realizado. El bot funciona a la perfección en el servidor y la integración fue rápida e impecable. Todos los sistemas que me implementó funcionan increíblemente bien. El precio es bastante barato para la gran calidad del bot y sus 2500 líneas."</p>
+                    <p class="resena-atribucion">Reseña de un cliente</p>
+                </div>
+            </div>
         </div>
     </section>
 
